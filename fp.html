@@ -77,6 +77,79 @@
 
     <div class="overlay" id="overlay"></div>
 
+    <section class="Structure">
+      <div class="forgot-wrapper">
+        <div class="forgot-card">
+          <!-- LEFT SIDE -->
+          <div class="forgot-left">
+            <h1>Recover Access to <span>Stackly IT Solutions</span></h1>
+
+            <ul>
+              <li>✔ Secure password recovery</li>
+              <li>✔ Protect your account data and preferences</li>
+              <li>✔ Encrypted password reset process</li>
+              <li>✔ Quick and safe account access restoration</li>
+            </ul>
+
+            <div class="tip">
+              Tip: Press
+              <a href="./error.html" class="tabb"><strong>Tab</strong></a>
+              to move fields
+            </div>
+          </div>
+
+          <!-- RIGHT SIDE -->
+          <div class="forgot-right">
+            <h2>Forgot Password</h2>
+            <p>Enter your Gmail to receive a secure reset link.</p>
+
+            <form id="forgotForm">
+              <div class="input-group">
+                <input
+                  type="email"
+                  id="forgotEmail"
+                  placeholder="you@gmail.com"
+                  required
+                />
+              </div>
+
+              <button type="submit" class="forgot-btn">Send Reset Link</button>
+
+              <div class="links">
+                <p>
+                  Remembered your password?
+                  <a href="./login.html">Go back to Login</a>
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const forgotForm = document.getElementById("forgotForm");
+
+      forgotForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const email = document.getElementById("forgotEmail").value.trim();
+
+        const gmailPattern = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+
+        if (!gmailPattern.test(email)) {
+          alert("Email must end with @gmail.com");
+          return;
+        }
+
+        alert("Reset link sent to your Gmail.");
+
+        setTimeout(() => {
+          window.location.href = "login.html";
+        }, 1500);
+      });
+    </script>
+
     <footer class="premium-footer">
       <div class="footer-upper">
         <div class="footer-col brand-col">

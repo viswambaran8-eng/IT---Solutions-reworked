@@ -77,7 +77,219 @@
 
     <div class="overlay" id="overlay"></div>
 
+ <section class="Structure">
+      <div class="signout-wrapper">
+        <div class="signout-card">
+          <!-- LEFT SIDE -->
+          <div class="signout-left">
+            <h1>Create your account on <span>Stackly IT Solutions</span></h1>
 
+            <ul>
+              <li>✔ Access institutional-grade liquidity & asset classes</li>
+              <li>✔ Real-time tracking of cross-border settlements</li>
+              <li>✔ Secure procurement for corporate treasury & funds</li>
+              <li>✔ View algorithmic market sheets and risk analytics</li>
+              <li>✔ 24/7 Priority advisory and capital maintenance</li>
+            </ul>
+
+            <div class="tip">
+              Tip: Press
+              <a href="./error.html" class="tabb"><strong>Tab</strong></a>
+              to move fields
+            </div>
+          </div>
+
+          <!-- RIGHT SIDE -->
+          <div class="signout-right">
+            <h2>Create Account</h2>
+            <p class="headings">
+              Join Stackly Video Hub and start uploading your content.
+            </p>
+
+            <form id="signupForm">
+              <!-- FULL NAME -->
+              <div class="input-group">
+                <input
+                  type="text"
+                  id="fullname"
+                  placeholder="Full Name"
+                  required
+                />
+              </div>
+
+              <!-- ROLE -->
+              <div class="input-group">
+                <select id="role" required>
+                  <option value="">Select Role</option>
+                  <option value="administrator">Admin</option>
+                  <!-- <option value="editor">Editor</option> -->
+                  <option value="user">User</option>
+                </select>
+              </div>
+
+              <!-- EMAIL -->
+              <div class="input-group">
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="you@gmail.com"
+                  required
+                />
+              </div>
+
+              <!-- CHANNEL / ORGANIZATION -->
+              <div class="input-group">
+                <input
+                  type="text"
+                  id="channel"
+                  placeholder="Channel Name / Organization"
+                  required
+                />
+              </div>
+
+              <!-- PASSWORD -->
+              <div class="input-group password-group">
+                <input
+                  type="password"
+                  id="password"
+                  placeholder="Password"
+                  required
+                />
+                <span id="togglePassword">Show</span>
+              </div>
+
+              <!-- CONFIRM PASSWORD -->
+              <div class="input-group password-group">
+                <input
+                  type="password"
+                  id="confirmPassword"
+                  placeholder="Confirm Password"
+                  required
+                />
+                <span id="toggleConfirmPassword">Show</span>
+              </div>
+
+              <!-- TERMS -->
+              <!-- <div class="input-group checkbox-group"> -->
+              <label
+                style="
+                  font-size: 14px;
+                  text-align: center;
+                  width: 100%;
+                  display: flex;
+                  gap: 10px;
+                  justify-content: center;
+                  align-items: center;
+                "
+              >
+                <input type="checkbox" id="terms" required />
+                I agree to the Terms of Service and Privacy Policy.
+              </label>
+              <!-- </div> -->
+
+              <!-- BUTTON -->
+              <button type="submit" class="signout-btn">Create Account</button>
+
+              <div class="link">
+                <p class="links">
+                  Already have an account?
+                  <a href="./login.html">Sign-In</a>
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const signupForm = document.getElementById("signupForm");
+
+      const password = document.getElementById("password");
+      const confirmPassword = document.getElementById("confirmPassword");
+
+      const togglePassword = document.getElementById("togglePassword");
+      const toggleConfirmPassword = document.getElementById(
+        "toggleConfirmPassword",
+      );
+
+      /* SHOW / HIDE PASSWORD */
+
+      togglePassword.addEventListener("click", () => {
+        const type = password.type === "password" ? "text" : "password";
+        password.type = type;
+
+        togglePassword.textContent = type === "password" ? "Show" : "Hide";
+      });
+
+      toggleConfirmPassword.addEventListener("click", () => {
+        const type = confirmPassword.type === "password" ? "text" : "password";
+        confirmPassword.type = type;
+
+        toggleConfirmPassword.textContent =
+          type === "password" ? "Show" : "Hide";
+      });
+
+      /* SIGNUP VALIDATION */
+
+      signupForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const fullname = document.getElementById("fullname").value.trim();
+        const role = document.getElementById("role").value;
+        const email = document.getElementById("email").value.trim();
+        const channel = document.getElementById("channel").value.trim();
+        const pass = password.value.trim();
+        const confirmPass = confirmPassword.value.trim();
+        const terms = document.getElementById("terms").checked;
+
+        const gmailPattern = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+
+        const passwordPattern =
+          /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{6,}$/;
+
+        if (fullname.length < 3) {
+          alert("Full name must be at least 3 characters");
+          return;
+        }
+
+        if (!role) {
+          alert("Please select your role");
+          return;
+        }
+
+        if (!gmailPattern.test(email)) {
+          alert("Email must end with @gmail.com");
+          return;
+        }
+
+        if (channel.length < 3) {
+          alert("Enter valid channel / organization name");
+          return;
+        }
+
+        if (!passwordPattern.test(pass)) {
+          alert(
+            "Password must contain:\n- Uppercase letter\n- Lowercase letter\n- Number\n- Special symbol\n- Minimum 6 characters",
+          );
+          return;
+        }
+
+        if (pass !== confirmPass) {
+          alert("Passwords do not match");
+          return;
+        }
+
+        if (!terms) {
+          alert("You must agree to Terms and Privacy Policy");
+          return;
+        }
+
+        alert("Account created successfully!");
+
+        window.location.href = "login.html";
+      });
+    </script>
     
     <footer class="premium-footer">
       <div class="footer-upper">

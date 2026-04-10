@@ -77,7 +77,137 @@
 
     <div class="overlay" id="overlay"></div>
 
+<section class="Structure">
+      <div class="login-wrapper">
+        <div class="login-card">
+          <!-- LEFT SIDE -->
+          <div class="login-left">
+            <h1>Create your account on <span>Stackly IT Solutions</span></h1>
 
+            <ul>
+              <li>✔ Access institutional-grade liquidity & asset classes</li>
+              <li>✔ Real-time tracking of cross-border settlements</li>
+              <li>✔ Secure procurement for corporate treasury & funds</li>
+              <li>✔ View algorithmic market sheets and risk analytics</li>
+              <li>✔ 24/7 Priority advisory and capital maintenance</li>
+            </ul>
+
+            <div class="tip">
+              Tip: Press
+              <a href="./error.html" class="tabb"><strong>Tab</strong></a>
+              to move fields
+            </div>
+          </div>
+
+          <!-- RIGHT SIDE -->
+          <div class="login-right">
+            <h2>Login</h2>
+            <p>Access your Dashboard and Manage with Care.</p>
+
+            <form id="loginForm">
+              <!-- ROLE -->
+              <div class="input-group">
+                <select id="role" required>
+                  <option value="">Login As</option>
+                  <option value="customer">Customer</option>
+                  <option value="admin">Admin</option>
+                </select>
+              </div>
+
+              <!-- EMAIL -->
+              <div class="input-group">
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="you@gmail.com"
+                  required
+                />
+              </div>
+
+              <!-- PASSWORD -->
+              <div class="input-group password-group">
+                <input
+                  type="password"
+                  id="password"
+                  placeholder="Password"
+                  required
+                />
+                <span id="togglePassword">Show</span>
+              </div>
+
+              <a href="./fp.html" class="forgot">Forgot password?</a>
+
+              <!-- <button type="submit" class="login-btn1">
+                Login to Dashboard
+              </button> -->
+              <button type="submit" class="login-btn1">Login</button>
+
+              <div class="signup">
+                <p>New here? <a href="./signup.html">Create an account</a></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const togglePassword = document.getElementById("togglePassword");
+        const password = document.getElementById("password");
+        const form = document.getElementById("loginForm");
+
+        togglePassword.addEventListener("click", () => {
+          const type = password.type === "password" ? "text" : "password";
+          password.type = type;
+          togglePassword.textContent = type === "password" ? "Show" : "Hide";
+        });
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const role = document.getElementById("role").value;
+          const email = document.getElementById("email").value.trim();
+          const pass = password.value.trim();
+
+          const gmailPattern = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+
+          // ✅ Password rule
+          const passwordPattern =
+            /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$#!%*?&]{6,}$/;
+
+          if (!role) {
+            alert("Please select login role");
+            return;
+          }
+
+          if (!gmailPattern.test(email)) {
+            alert("Email must end with @gmail.com");
+            return;
+          }
+
+          if (!passwordPattern.test(pass)) {
+            alert(
+              "Password must be at least 6 characters and include uppercase, lowercase, number, and symbol",
+            );
+            return;
+          }
+
+          try {
+            sessionStorage.setItem("loggedInUser", email);
+            sessionStorage.setItem("role", role);
+
+            if (role === "customer") {
+              window.location.href = "./dashboard.html";
+            } else if (role === "admin") {
+              window.location.href = "./dashboard2.html";
+            }
+          } catch (error) {
+            alert("Storage issue. Try using Live Server.");
+          }
+        });
+      });
+    </script>
     
     <footer class="premium-footer">
       <div class="footer-upper">

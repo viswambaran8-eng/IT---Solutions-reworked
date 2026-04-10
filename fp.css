@@ -613,3 +613,230 @@ a {
   background-color: #0f172a; /* Dark Navy for contrast */
   box-shadow: 0 8px 25px rgba(15, 23, 42, 0.4);
 }
+
+/* structure */
+
+/* ===== MAIN SECTION ===== */
+.Structure {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  padding: 100px 0px;
+}
+
+/* ===== WRAPPER ===== */
+.forgot-wrapper {
+  width: 90%;
+  max-width: 1000px;
+}
+
+/* ===== CARD ===== */
+.forgot-card {
+  display: flex;
+  background: rgba(10, 10, 10, 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 20px;
+  overflow: hidden;
+
+  /* UPDATED COLOR SCHEME: orangered */
+  box-shadow: 0 0 40px rgba(255, 69, 0, 0.15);
+  border: 1px solid orangered;
+}
+
+/* ===== LEFT SIDE ===== */
+.forgot-left {
+  flex: 1;
+  padding: 50px;
+  color: #fff;
+}
+
+.forgot-left h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.forgot-left span {
+  color: transparent;
+  background: linear-gradient(
+    120deg,
+    orangered 0%,
+    #ffffff 50%,
+    orangered 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shimmer 6s linear infinite;
+}
+
+/* Shimmer Animation */
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.forgot-left ul {
+  list-style: none;
+  line-height: 2;
+  margin-bottom: 40px;
+  padding: 0;
+}
+
+/* Tip Box / Status Badge */
+.tip {
+  font-size: 14px;
+  opacity: 0.8;
+  padding: 10px 15px;
+  border: 2px solid orangered;
+  border-radius: 12px;
+  width: max-content;
+  color: orangered;
+  font-family: "Courier New", monospace;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.tabb {
+  text-decoration: none;
+  color: white;
+  padding: 6px 15px;
+  border: 1px solid orangered;
+  border-radius: 8px;
+  margin: 0px 5px;
+  transition: 0.3s;
+}
+
+.tabb:hover {
+  color: #fff;
+  background: orangered;
+  border-color: orangered;
+  box-shadow: 0 0 15px rgba(255, 69, 0, 0.4);
+}
+
+/* ===== RIGHT SIDE ===== */
+.forgot-right {
+  flex: 1;
+  padding: 50px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
+
+.forgot-right h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.forgot-right p {
+  margin-bottom: 30px;
+  opacity: 0.7;
+}
+
+/* ===== INPUT ===== */
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 69, 0, 0.2);
+  outline: none;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: orangered;
+  background: rgba(255, 69, 0, 0.05);
+  box-shadow: 0 0 15px rgba(255, 69, 0, 0.2);
+}
+
+.input-group input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* ===== BUTTON ===== */
+.forgot-btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  /* Orangered Gradient */
+  background: linear-gradient(90deg, orangered, #cc3700);
+  color: #fff;
+
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.forgot-btn:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 25px rgba(255, 69, 0, 0.5);
+  filter: brightness(1.2);
+}
+
+/* ===== LINKS ===== */
+.links {
+  margin-top: 20px;
+  font-size: 14px;
+  opacity: 0.8;
+  text-align: center;
+}
+
+.links a {
+  color: orangered;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.links a:hover {
+  text-shadow: 0 0 10px orangered;
+  color: #fff;
+} 
+
+/* ===== RESPONSIVE ===== */
+
+@media screen and (max-width: 900px) {
+  .forgot-card {
+    flex-direction: column;
+  }
+
+  .forgot-left,
+  .forgot-right {
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .tip {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .forgot-left h1 {
+    font-size: 21px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .Structure {
+    padding: 50px 10px;
+  }
+}
