@@ -1,0 +1,838 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IT Solutions</title>
+    <link rel="stylesheet" href="./contact.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="./index.html">
+          <img src="./Assets/logo.webp" alt="IT Solution Logo" />
+        </a>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="./index.html" class="active-page">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./services.html">Services</a></li>
+          <li><a href="./blog.html">Blog</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="div">
+        <div class="div">
+          <a href="./login.html">
+            <button class="btn">Login</button>
+          </a>
+        </div>
+        <div class="menu-icon" id="menu-trigger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <!-- <div class="sidebar-logo">STACKLY<span>.</span></div> -->
+        <div class="logo">
+          <a href="./index.html">
+            <img src="./Assets/logo.webp" alt="" />
+          </a>
+        </div>
+
+        <div class="close-icon" id="close-trigger">&times;</div>
+      </div>
+      <ul class="side-links">
+        <li class="side-item">
+          <a href="./index.html">Home</a>
+        </li>
+        <li class="side-item"><a href="./about.html">About</a></li>
+        <li class="side-item"><a href="./services.html">Services</a></li>
+        <li class="side-item"><a href="./blog.html">Blog</a></li>
+        <li class="side-item"><a href="./contact.html">Contact</a></li>
+        <li class="side-item"><a href="./login.html">Login</a></li>
+      </ul>
+      <div class="sidebar-footer">
+        <!-- <button class="side-log-btn">Open An Account</button> -->
+      </div>
+    </aside>
+
+    <div class="overlay" id="overlay"></div>
+
+    <section class="contact-hero">
+      <div class="contact-bg-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?q=80&w=1600"
+          alt="Contact Network"
+        />
+        <div class="contact-overlay"></div>
+      </div>
+
+      <div class="container">
+        <div class="contact-hero-flex">
+          <div class="contact-hero-left">
+            <div class="status-indicator">
+              <span class="pulse-dot"></span>
+              Available for New Projects
+            </div>
+            <h1 class="hero-title">
+              Let’s Connect & <br />
+              <span class="accent">Build Together</span>
+            </h1>
+            <p class="hero-desc">
+              Have a complex IT challenge or a vision for a new digital banking
+              platform? Our team is ready to provide the technical precision
+              your project deserves.
+            </p>
+            <div class="contact-quick-links">
+              <a href="mailto:hello@stackly.com" class="link-item"
+                ><i class="fa-solid fa-envelope"></i> hello@stackly.com</a
+              >
+              <a href="tel:+123456789" class="link-item"
+                ><i class="fa-solid fa-phone"></i> +1 (234) 567-890</a
+              >
+            </div>
+          </div>
+
+          <div class="contact-hero-right">
+            <div
+              class="contact-preview-card"
+              onmouseenter="cardLift(this)"
+              onmouseleave="cardDrop(this)"
+            >
+              <div class="preview-header">
+                <div class="user-stack">
+                  <img
+                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=100"
+                    alt="Tech Lead"
+                  />
+                  <div class="user-info">
+                    <strong>Project Lead</strong>
+                    <span>Online Now</span>
+                  </div>
+                </div>
+              </div>
+              <p>
+                "We typically respond within 2 business hours for all technical
+                inquiries."
+              </p>
+              <a href="./error.html">
+                <button class="btn" onclick="scrollToForm()">
+                  Start a Conversation
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-form-section" id="contact-form-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="small-tag">Inquiry</span>
+          <h2 class="header-title">
+            Send a <span class="accent">Message</span>
+          </h2>
+          <div class="header-line"></div>
+        </div>
+
+        <div class="form-wrapper">
+          <form id="mainContactForm" action="./error.html">
+            <div class="form-grid">
+              <div class="input-group">
+                <input type="text" id="name" required placeholder=" " />
+                <label for="name">Full Name</label>
+                <div class="input-focus-line"></div>
+              </div>
+
+              <div class="input-group">
+                <input type="email" id="email" required placeholder=" " />
+                <label for="email">Work Email</label>
+                <div class="input-focus-line"></div>
+              </div>
+
+              <div class="input-group full-width">
+                <select id="service" required>
+                  <option value="" disabled selected>Select Service</option>
+                  <option value="cloud">Cloud Computing</option>
+                  <option value="ai">AI Solutions</option>
+                  <option value="cyber">Cybersecurity</option>
+                  <option value="dev">Software Development</option>
+                </select>
+              </div>
+
+              <div class="input-group full-width">
+                <textarea
+                  id="message"
+                  rows="5"
+                  required
+                  placeholder=" "
+                ></textarea>
+                <label for="message">Project Details</label>
+                <div class="input-focus-line"></div>
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              class="submit-btn"
+              onmouseenter="btnAnimate(this)"
+              onmouseleave="btnReset(this)"
+            >
+              <span class="btn-text">Initialize Project</span>
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+
+          <!-- <div class="success-overlay">
+            <div class="success-content">
+              <i class="fa-solid fa-circle-check"></i>
+              <h3>Transmission Received</h3>
+              <p>Our team will contact you within 2 business hours.</p>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+
+    <section class="map-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="small-tag">Global Network</span>
+          <h2 class="header-title">
+            Our <span class="accent">Locations</span>
+          </h2>
+          <div class="header-line"></div>
+        </div>
+
+        <div class="map-container">
+          <img
+            src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=1600"
+            alt="World Map"
+            class="map-img"
+          />
+
+          <div class="location-point nyc" style="top: 35%; left: 25%">
+            <div class="pulse"></div>
+            <div class="location-card">
+              <h4>New York</h4>
+              <p>Financial District Hub</p>
+            </div>
+          </div>
+
+          <div class="location-point london" style="top: 30%; left: 48%">
+            <div class="pulse"></div>
+            <div class="location-card">
+              <h4>London</h4>
+              <p>EMEA Operations</p>
+            </div>
+          </div>
+
+          <div class="location-point singapore" style="top: 65%; left: 78%">
+            <div class="pulse"></div>
+            <div class="location-card">
+              <h4>Singapore</h4>
+              <p>APAC Intelligence</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="offices-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="small-tag">Our Network</span>
+          <h2 class="header-title">
+            Global <span class="accent">Headquarters</span>
+          </h2>
+          <div class="header-line"></div>
+        </div>
+
+        <div class="offices-grid">
+          <div
+            class="office-card"
+            onmouseenter="officeHover(this)"
+            onmouseleave="officeLeave(this)"
+          >
+            <div class="office-header">
+              <span class="city">New York</span>
+              <span class="type">Global HQ</span>
+            </div>
+            <div class="office-body">
+              <p>
+                <i class="fa-solid fa-location-dot"></i> 121 Financial District,
+                Suite 500<br />New York, NY 10005
+              </p>
+              <p><i class="fa-solid fa-clock"></i> 09:00 AM — 06:00 PM (EST)</p>
+            </div>
+            <div class="office-footer">
+              <span class="department">Lead: Engineering & Finance</span>
+            </div>
+          </div>
+
+          <div
+            class="office-card"
+            onmouseenter="officeHover(this)"
+            onmouseleave="officeLeave(this)"
+          >
+            <div class="office-header">
+              <span class="city">London</span>
+              <span class="type">Regional Office</span>
+            </div>
+            <div class="office-body">
+              <p>
+                <i class="fa-solid fa-location-dot"></i> 45 Tech Lane, Canary
+                Wharf<br />London, E14 5AB
+              </p>
+              <p><i class="fa-solid fa-clock"></i> 09:00 AM — 06:00 PM (GMT)</p>
+            </div>
+            <div class="office-footer">
+              <span class="department">Lead: Cybersecurity & Ops</span>
+            </div>
+          </div>
+
+          <div
+            class="office-card"
+            onmouseenter="officeHover(this)"
+            onmouseleave="officeLeave(this)"
+          >
+            <div class="office-header">
+              <span class="city">Singapore</span>
+              <span class="type">Innovation Hub</span>
+            </div>
+            <div class="office-body">
+              <p>
+                <i class="fa-solid fa-location-dot"></i> 18 Science Park Dr,
+                Level 4<br />Singapore 118229
+              </p>
+              <p><i class="fa-solid fa-clock"></i> 09:00 AM — 06:00 PM (SGT)</p>
+            </div>
+            <div class="office-footer">
+              <span class="department">Lead: AI & Data Strategy</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="support-channels-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="small-tag">Communication Hub</span>
+          <h2 class="header-title">
+            Support <span class="accent">Ecosystem</span>
+          </h2>
+          <div class="header-line"></div>
+        </div>
+
+        <div class="channels-flex">
+          <a
+            href="mailto:support@stackly.com"
+            class="support-tile"
+            onmouseenter="supportHover(this)"
+            onmouseleave="supportLeave(this)"
+          >
+            <div class="support-icon">
+              <i class="fa-solid fa-envelope-open-text"></i>
+            </div>
+            <h3>Email Support</h3>
+            <p>Direct technical inquiries to our engineering desk.</p>
+            <span class="availability">Response: < 2h</span>
+          </a>
+
+          <a
+            href="tel:+123456789"
+            class="support-tile"
+            onmouseenter="supportHover(this)"
+            onmouseleave="supportLeave(this)"
+          >
+            <div class="support-icon"><i class="fa-solid fa-headset"></i></div>
+            <h3>Phone Support</h3>
+            <p>Speak directly with a project lead for critical issues.</p>
+            <span class="availability">24/7 Priority Line</span>
+          </a>
+
+          <div
+            class="support-tile"
+            onclick="openLiveChat()"
+            onmouseenter="supportHover(this)"
+            onmouseleave="supportLeave(this)"
+          >
+            <div class="support-icon"><i class="fa-solid fa-comments"></i></div>
+            <h3>Live Intelligence</h3>
+            <p>Instant support for real-time infrastructure queries.</p>
+            <span class="availability">Online Now</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="small-tag">Knowledge Base</span>
+          <h2 class="header-title">
+            Common <span class="accent">Inquiries</span>
+          </h2>
+          <div class="header-line"></div>
+        </div>
+
+        <div class="faq-container">
+          <div class="faq-item" onclick="toggleFAQ(this)">
+            <div class="faq-question">
+              <span>How do you ensure medical-grade data security?</span>
+              <div class="faq-icon"><i class="fa-solid fa-plus"></i></div>
+            </div>
+            <div class="faq-answer">
+              <p>
+                We implement zero-trust architecture combined with AES-256
+                encryption. Every data packet is validated through multi-layer
+                authentication protocols to ensure complete HIPAA and GDPR
+                compliance.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFAQ(this)">
+            <div class="faq-question">
+              <span>Can Stackly integrate with existing legacy systems?</span>
+              <div class="faq-icon"><i class="fa-solid fa-plus"></i></div>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Yes. Our "Adapter-First" philosophy allows us to build secure
+                API bridges between modern AI-driven cloud infrastructure and
+                your existing legacy hardware without downtime.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFAQ(this)">
+            <div class="faq-question">
+              <span
+                >What is the typical timeline for an AI implementation?</span
+              >
+              <div class="faq-icon"><i class="fa-solid fa-plus"></i></div>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Initial discovery and model training typically take 4-6 weeks.
+                Full deployment into your production environment, including
+                staff training and testing, is usually completed within 3
+                months.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFAQ(this)">
+            <div class="faq-question">
+              <span>Do you offer 24/7 infrastructure monitoring?</span>
+              <div class="faq-icon"><i class="fa-solid fa-plus"></i></div>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Our Global Network Operations Center (GNOC) provides
+                round-the-clock monitoring. We utilize predictive AI to detect
+                and mitigate potential hardware failures before they impact your
+                service.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFAQ(this)">
+            <div class="faq-question">
+              <span>How does the "Live Intelligence" support work?</span>
+              <div class="faq-icon"><i class="fa-solid fa-plus"></i></div>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Live Intelligence connects you directly with a Level 3 Engineer
+                via a secure encrypted tunnel. This isn't a chatbot; it is
+                real-time technical intervention for complex system
+                architecture.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="premium-footer">
+      <div class="footer-upper">
+        <div class="footer-col brand-col">
+          <div class="logo footer-logo">
+            <a href="./index.html">
+              <img src="./Assets/logo.webp" alt="OrangeRed IT Solutions Logo" />
+            </a>
+          </div>
+          <p class="brand-brief">
+            Empowering modern enterprises with resilient IT infrastructure. We
+            specialize in scalable cloud architecture, cybersecurity
+            intelligence, and full-stack digital transformation to keep your
+            business future-ready.
+          </p>
+          <div class="footer-socials">
+            <a href="./error.html"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="./error.html"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="./error.html"><i class="fa-brands fa-github"></i></a>
+            <a href="./error.html"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="./about.html">About </a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./login.html">Login</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-title">IT Solutions</h4>
+          <ul class="footer-links">
+            <li><a href="./error.html">Cloud Migration & Ops</a></li>
+            <li><a href="./error.html">Managed Cybersecurity</a></li>
+            <li><a href="./error.html">Enterprise Software Dev</a></li>
+            <li><a href="./error.html">Data Analytics & BI</a></li>
+            <li><a href="./error.html">IT Strategy Consulting</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col contact-col">
+          <h4 class="footer-title">Stay Connected</h4>
+          <p class="small-text">
+            Subscribe for the latest insights in enterprise tech and security.
+          </p>
+          <form class="footer-subscribe" action="./error.html">
+            <input type="email" placeholder="Work Email" required />
+            <button><i class="fa-solid fa-paper-plane"></i></button>
+          </form>
+          <div class="contact-info">
+            <span><i class="fa-solid fa-phone"></i>+91 234 5678</span>
+            <span><i class="fa-solid fa-envelope"></i>123@stackly.com</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-container">
+          <div class="divider-line"></div>
+          <div class="bottom-flex">
+            <p class="copyright">
+              &copy; 2026 Stackly IT Solutions. All Rights Reserved.
+            </p>
+            <div class="legal-links">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms of Service</a>
+              <a href="#">Cookie Policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- footer -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        gsap.from(".footer-col", {
+          scrollTrigger: {
+            trigger: ".premium-footer",
+            start: "top 90%",
+          },
+          opacity: 0,
+          y: 40,
+          stagger: 0.15,
+          duration: 1,
+          ease: "power2.out",
+        });
+
+        // Fade in the bottom bar divider
+        gsap.from(".divider-line", {
+          scrollTrigger: ".footer-bottom",
+          opacity: 0,
+          duration: 2,
+          ease: "power4.inOut",
+        });
+      });
+    </script>
+    <!-- hero -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        const contactTl = gsap.timeline();
+
+        contactTl
+          .from(".status-indicator", { opacity: 0, y: -20, duration: 0.8 })
+          .from(
+            ".hero-title",
+            { opacity: 0, x: -50, duration: 1, ease: "power3.out" },
+            "-=0.4",
+          )
+          .from(".hero-desc", { opacity: 0, x: -30, duration: 0.8 }, "-=0.6")
+          .from(
+            ".contact-quick-links .link-item",
+            { opacity: 0, y: 10, stagger: 0.2, duration: 0.5 },
+            "-=0.4",
+          )
+          .from(
+            ".contact-preview-card",
+            { opacity: 0, scale: 0.9, duration: 1, ease: "back.out(1.7)" },
+            "-=1",
+          );
+
+        // Background Parallax
+        gsap.to(".contact-bg-wrap img", {
+          yPercent: 15,
+          ease: "none",
+          scrollTrigger: {
+            trigger: ".contact-hero",
+            start: "top top",
+            end: "bottom top",
+            scrub: true,
+          },
+        });
+      });
+    </script>
+
+    <!-- 1 , 2  -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Form Entrance
+        gsap.from(".form-wrapper", {
+          scrollTrigger: ".contact-form-section",
+          opacity: 0,
+          y: 50,
+          duration: 1,
+          ease: "power3.out",
+        });
+
+        // Map Entrance
+        gsap.from(".map-container", {
+          scrollTrigger: ".map-section",
+          opacity: 0,
+          scale: 0.95,
+          duration: 1.2,
+        });
+      });
+
+      /* --- Functions --- */
+
+      function btnAnimate(btn) {
+        gsap.to(btn, { backgroundColor: "#cc3700", duration: 0.3 });
+        gsap.to(btn.querySelector("i"), {
+          x: 5,
+          repeat: -1,
+          yoyo: true,
+          duration: 0.4,
+        });
+      }
+
+      function btnReset(btn) {
+        gsap.to(btn, { backgroundColor: "orangered", duration: 0.3 });
+        gsap.killTweensOf(btn.querySelector("i"));
+        gsap.to(btn.querySelector("i"), { x: 0 });
+      }
+
+      function handleFormSubmit(e) {
+        e.preventDefault();
+        const wrapper = document.querySelector(".form-wrapper");
+        const success = document.querySelector(".success-overlay");
+
+        // GSAP Transition to success
+        gsap.to("#mainContactForm", {
+          opacity: 0,
+          scale: 0.9,
+          duration: 0.5,
+          onComplete: () => {
+            document.getElementById("mainContactForm").style.display = "none";
+            success.style.display = "flex";
+            gsap.from(".success-content", { y: 20, opacity: 0, duration: 0.5 });
+          },
+        });
+      }
+    </script>
+
+    <!-- section-header -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Select all headers on the page
+        const allHeaders = document.querySelectorAll(".section-header");
+
+        allHeaders.forEach((header) => {
+          // Select internal elements for this specific header
+          const tag = header.querySelector(".small-tag");
+          const title = header.querySelector(".header-title");
+          const line = header.querySelector(".header-line");
+
+          // Create a timeline for this header
+          const headerTl = gsap.timeline({
+            scrollTrigger: {
+              trigger: header,
+              start: "top 85%", // Starts when the header is 85% from the top
+              toggleActions: "play none none none", // Only plays once
+            },
+          });
+
+          headerTl
+            // 1. Reveal the container
+            .to(header, { opacity: 1, duration: 0.1 })
+
+            // 2. Small Tag slides up and fades in
+            .fromTo(
+              tag,
+              { y: 20, opacity: 0 },
+              { y: 0, opacity: 1, duration: 0.6, ease: "power2.out" },
+            )
+
+            // 3. Main Title pops in with a slight delay
+            .fromTo(
+              title,
+              { y: 30, opacity: 0 },
+              { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" },
+              "-=0.4",
+            )
+
+            // 4. The Orangered Line 'draws' out from the center
+            .to(
+              line,
+              {
+                width: "60px",
+                duration: 1,
+                ease: "expo.out",
+              },
+              "-=0.3",
+            );
+        });
+      });
+    </script>
+
+    <!-- 3 , 4 -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        const supportTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".support-channels-section",
+            start: "top 80%",
+          },
+        });
+
+        // Animate the Header first
+        supportTl
+          .from(".support-channels-section", {
+            opacity: 1,
+            duration: 0.8,
+            stagger: 0.2,
+            ease: "power2.out",
+          })
+          // Then stagger the tiles
+          .from(
+            ".support-tile",
+            {
+              opacity: 1,
+              stagger: 0.2,
+              duration: 1,
+              ease: "expo.out",
+            },
+            "-=0.4",
+          ); // Starts slightly before header finish
+      });
+    </script>
+
+    <!-- 5 -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Entrance Stagger
+        gsap.to(".faq-item", {
+          scrollTrigger: {
+            trigger: ".faq-container",
+            start: "top 85%",
+          },
+          opacity: 1,
+          y: 0,
+          stagger: 0.15,
+          duration: 1,
+          ease: "power3.out",
+        });
+      });
+    </script>
+
+    <script>
+      function toggleFAQ(element) {
+        const answer = element.querySelector(".faq-answer");
+        const allItems = document.querySelectorAll(".faq-item");
+
+        // Close other items (Optional: Remove if you want multiple open)
+        allItems.forEach((item) => {
+          if (item !== element && item.classList.contains("active")) {
+            item.classList.remove("active");
+            gsap.to(item.querySelector(".faq-answer"), {
+              maxHeight: 0,
+              opacity: 0,
+              duration: 0.4,
+            });
+          }
+        });
+
+        // Toggle Current Item
+        element.classList.toggle("active");
+
+        if (element.classList.contains("active")) {
+          gsap.to(answer, {
+            maxHeight: 500, // Large enough to fit content
+            opacity: 1,
+            duration: 0.6,
+            ease: "power2.out",
+          });
+        } else {
+          gsap.to(answer, {
+            maxHeight: 0,
+            opacity: 0,
+            duration: 0.4,
+            ease: "power2.in",
+          });
+        }
+      }
+    </script>
+  </body>
+</html>

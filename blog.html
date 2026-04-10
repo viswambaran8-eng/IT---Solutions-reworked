@@ -1,0 +1,913 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IT Solutions</title>
+    <link rel="stylesheet" href="./blog.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="./index.html">
+          <img src="./Assets/logo.webp" alt="IT Solution Logo" />
+        </a>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="./index.html" class="active-page">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./services.html">Services</a></li>
+          <li><a href="./blog.html">Blog</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="div">
+        <div class="div">
+          <a href="./login.html">
+            <button class="btn">Login</button>
+          </a>
+        </div>
+        <div class="menu-icon" id="menu-trigger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <!-- <div class="sidebar-logo">STACKLY<span>.</span></div> -->
+        <div class="logo">
+          <a href="./index.html">
+            <img src="./Assets/logo.webp" alt="" />
+          </a>
+        </div>
+
+        <div class="close-icon" id="close-trigger">&times;</div>
+      </div>
+      <ul class="side-links">
+        <li class="side-item">
+          <a href="./index.html">Home</a>
+        </li>
+        <li class="side-item"><a href="./about.html">About</a></li>
+        <li class="side-item"><a href="./services.html">Services</a></li>
+        <li class="side-item"><a href="./blog.html">Blog</a></li>
+        <li class="side-item"><a href="./contact.html">Contact</a></li>
+        <li class="side-item"><a href="./login.html">Login</a></li>
+      </ul>
+      <div class="sidebar-footer">
+        <!-- <button class="side-log-btn">Open An Account</button> -->
+      </div>
+    </aside>
+
+    <div class="overlay" id="overlay"></div>
+
+    <section class="blog-hero">
+      <div class="hero-image-overlay">
+        <img
+          src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1600"
+          alt="Tech Background"
+        />
+        <div class="image-gradient"></div>
+      </div>
+
+      <div class="container">
+        <div class="hero-flex">
+          <div class="hero-left">
+            <div class="hero-badge">The Intelligence Hub</div>
+            <h1 class="hero-title">
+              Insights, Trends & <span class="accent">Innovations</span>
+            </h1>
+            <p class="hero-subtext">
+              Deep dives into the future of IT infrastructure, AI-driven
+              development, and the digital transformation landscape.
+            </p>
+            <form class="hero-search" action="./error.html">
+              <input type="text" placeholder="Search insights..." />
+              <button class="search-btn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </form>
+          </div>
+
+          <div class="hero-right">
+            <div
+              class="featured-card"
+              onmouseenter="featuredHover(this)"
+              onmouseleave="featuredLeave(this)"
+            >
+              <div class="card-tag">Latest News</div>
+              <div class="featured-img">
+                <img
+                  src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800"
+                  alt="Cybersecurity"
+                />
+              </div>
+              <div class="featured-content">
+                <h3>The Future of Zero-Trust Networks in 2026</h3>
+                <p>
+                  Exploring the next wave of security protocols for global
+                  enterprises...
+                </p>
+                <a href="./error.html" class="read-more"
+                  >Read Article <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-blog-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="small-tag">Trending Now</span>
+          <h2 class="header-title">
+            Editor's <span class="accent">Choice</span>
+          </h2>
+          <div class="header-line"></div>
+        </div>
+
+        <div
+          class="featured-blog-container"
+          onmouseenter="spotlightHover(this)"
+          onmouseleave="spotlightLeave(this)"
+        >
+          <div class="featured-badge">
+            <i class="fa-solid fa-fire"></i> Top Trending
+          </div>
+
+          <div class="featured-main-flex">
+            <div class="featured-visual">
+              <img
+                src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200"
+                alt="Cybersecurity Trends"
+              />
+              <div class="visual-overlay"></div>
+            </div>
+
+            <div class="featured-info">
+              <div class="meta-info">
+                <span
+                  ><i class="fa-regular fa-calendar"></i> April 10, 2026</span
+                >
+                <span><i class="fa-regular fa-clock"></i> 8 Min Read</span>
+              </div>
+              <h2 class="featured-headline">
+                The Rise of Quantum-Resistant Encryption in Enterprise Security
+              </h2>
+              <p class="featured-excerpt">
+                As quantum computing nears practical application, the IT
+                industry is pivoting toward new cryptographic standards.
+                Discover how medical and financial institutions are hardening
+                their infrastructure today.
+              </p>
+
+              <div class="featured-footer">
+                <button class="read-btn" onclick="location.href = '#'">
+                  Full Analysis <i class="fa-solid fa-chevron-right"></i>
+                </button>
+                <div class="reading-progress-container">
+                  <div class="progress-label">High Priority</div>
+                  <div class="progress-bar-wrap">
+                    <div class="progress-bar-fill"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="small-tag">Knowledge Base</span>
+          <h2 class="header-title">
+            Browse by <span class="accent">Expertise</span>
+          </h2>
+          <div class="header-line"></div>
+        </div>
+
+        <div class="category-grid">
+          <div
+            class="cat-card"
+            onclick="filterCategory(this, 'ai')"
+            onmouseenter="catHover(this)"
+            onmouseleave="catLeave(this)"
+          >
+            <div class="cat-icon"><i class="fa-solid fa-brain"></i></div>
+            <h3>Artificial Intelligence</h3>
+            <p>Neural networks, LLMs, and automated intelligence.</p>
+            <span class="cat-count">12 Posts</span>
+          </div>
+
+          <div
+            class="cat-card"
+            onclick="filterCategory(this, 'cloud')"
+            onmouseenter="catHover(this)"
+            onmouseleave="catLeave(this)"
+          >
+            <div class="cat-icon"><i class="fa-solid fa-cloud"></i></div>
+            <h3>Cloud Systems</h3>
+            <p>Scalable architecture and hybrid infrastructure.</p>
+            <span class="cat-count">08 Posts</span>
+          </div>
+
+          <div
+            class="cat-card"
+            onclick="filterCategory(this, 'security')"
+            onmouseenter="catHover(this)"
+            onmouseleave="catLeave(this)"
+          >
+            <div class="cat-icon">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h3>Cyber Security</h3>
+            <p>Zero-trust, encryption, and threat intelligence.</p>
+            <span class="cat-count">15 Posts</span>
+          </div>
+
+          <div
+            class="cat-card"
+            onclick="filterCategory(this, 'dev')"
+            onmouseenter="catHover(this)"
+            onmouseleave="catLeave(this)"
+          >
+            <div class="cat-icon"><i class="fa-solid fa-code"></i></div>
+            <h3>Development</h3>
+            <p>Agile workflows and precision engineering.</p>
+            <span class="cat-count">21 Posts</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="latest-posts">
+      <div class="container">
+        <div class="section-header">
+          <span class="small-tag">Recent Intel</span>
+          <h2 class="header-title">
+            Latest <span class="accent">Insights</span>
+          </h2>
+          <div class="header-line"></div>
+        </div>
+
+        <div class="posts-feed">
+          <article
+            class="post-item"
+            onmouseenter="postHover(this)"
+            onmouseleave="postLeave(this)"
+          >
+            <div class="post-img">
+              <img
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=600"
+                alt="Post"
+              />
+            </div>
+            <div class="post-data">
+              <span class="post-cat">Security</span>
+              <h3>Defending the Perimeter: AI in Threat Detection</h3>
+              <p>
+                How machine learning is predicting breaches before they
+                happen...
+              </p>
+              <div class="post-footer">
+                <span class="post-date">Apr 08, 2026</span>
+                <a href="#" class="arrow-link"
+                  ><i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="post-item"
+            onmouseenter="postHover(this)"
+            onmouseleave="postLeave(this)"
+          >
+            <div class="post-img">
+              <img
+                src="https://images.unsplash.com/photo-1558494949-ef010cbdcc48?q=80&w=600"
+                alt="Post"
+              />
+            </div>
+            <div class="post-data">
+              <span class="post-cat">Cloud</span>
+              <h3>The Cost of Serverless: Optimization Strategies</h3>
+              <p>
+                Navigating the financial architecture of modern cloud
+                computing...
+              </p>
+              <div class="post-footer">
+                <span class="post-date">Apr 05, 2026</span>
+                <a href="#" class="arrow-link"
+                  ><i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="post-item"
+            onmouseenter="postHover(this)"
+            onmouseleave="postLeave(this)"
+          >
+            <div class="post-img">
+              <img
+                src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?q=80&w=600"
+                alt="Post"
+              />
+            </div>
+            <div class="post-data">
+              <span class="post-cat">Dev</span>
+              <h3>Git-Ops: The Precision of Automated Deployment</h3>
+              <p>
+                Ensuring medical-grade reliability through version-controlled
+                infra...
+              </p>
+              <div class="post-footer">
+                <span class="post-date">Mar 28, 2026</span>
+                <a href="#" class="arrow-link"
+                  ><i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="popular-posts-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="small-tag">The Leaderboard</span>
+          <h2 class="header-title">Most <span class="accent">Read</span></h2>
+          <div class="header-line"></div>
+        </div>
+
+        <div class="popular-grid">
+          <div
+            class="popular-feature"
+            onmouseenter="featureHover(this)"
+            onmouseleave="featureLeave(this)"
+          >
+            <div class="feature-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200"
+                alt="Cybersecurity"
+              />
+              <div class="feature-overlay"></div>
+            </div>
+            <div class="feature-text">
+              <span class="rank-badge">#1 Trending</span>
+              <h3>Global IT Spending Trends: What to Expect in 2027</h3>
+              <p>
+                A comprehensive analysis of budget shifts toward AI-native
+                infrastructure and medical-grade data vaults.
+              </p>
+              <a href="#" class="btn-read"
+                >Read Full Report <i class="fa-solid fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="popular-list">
+            <div
+              class="pop-list-item"
+              onmouseenter="listItemHover(this)"
+              onmouseleave="listItemLeave(this)"
+            >
+              <div class="pop-rank">02</div>
+              <div class="pop-info">
+                <span class="pop-cat">Development</span>
+                <h4>Why GSAP is the standard for high-performance UI</h4>
+              </div>
+            </div>
+
+            <div
+              class="pop-list-item"
+              onmouseenter="listItemHover(this)"
+              onmouseleave="listItemLeave(this)"
+            >
+              <div class="pop-rank">03</div>
+              <div class="pop-info">
+                <span class="pop-cat">Cloud</span>
+                <h4>AWS vs Azure: The 2026 Enterprise Comparison</h4>
+              </div>
+            </div>
+
+            <div
+              class="pop-list-item"
+              onmouseenter="listItemHover(this)"
+              onmouseleave="listItemLeave(this)"
+            >
+              <div class="pop-rank">04</div>
+              <div class="pop-info">
+                <span class="pop-cat">AI</span>
+                <h4>Managing LLM Hallucinations in Medical Data</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="premium-footer">
+      <div class="footer-upper">
+        <div class="footer-col brand-col">
+          <div class="logo footer-logo">
+            <a href="./index.html">
+              <img src="./Assets/logo.webp" alt="OrangeRed IT Solutions Logo" />
+            </a>
+          </div>
+          <p class="brand-brief">
+            Empowering modern enterprises with resilient IT infrastructure. We
+            specialize in scalable cloud architecture, cybersecurity
+            intelligence, and full-stack digital transformation to keep your
+            business future-ready.
+          </p>
+          <div class="footer-socials">
+            <a href="./error.html"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="./error.html"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="./error.html"><i class="fa-brands fa-github"></i></a>
+            <a href="./error.html"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="./about.html">About </a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./login.html">Login</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-title">IT Solutions</h4>
+          <ul class="footer-links">
+            <li><a href="./error.html">Cloud Migration & Ops</a></li>
+            <li><a href="./error.html">Managed Cybersecurity</a></li>
+            <li><a href="./error.html">Enterprise Software Dev</a></li>
+            <li><a href="./error.html">Data Analytics & BI</a></li>
+            <li><a href="./error.html">IT Strategy Consulting</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col contact-col">
+          <h4 class="footer-title">Stay Connected</h4>
+          <p class="small-text">
+            Subscribe for the latest insights in enterprise tech and security.
+          </p>
+          <form class="footer-subscribe" action="./error.html">
+            <input type="email" placeholder="Work Email" required />
+            <button><i class="fa-solid fa-paper-plane"></i></button>
+          </form>
+          <div class="contact-info">
+            <span><i class="fa-solid fa-phone"></i>+91 234 5678</span>
+            <span><i class="fa-solid fa-envelope"></i>123@stackly.com</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-container">
+          <div class="divider-line"></div>
+          <div class="bottom-flex">
+            <p class="copyright">
+              &copy; 2026 Stackly IT Solutions. All Rights Reserved.
+            </p>
+            <div class="legal-links">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms of Service</a>
+              <a href="#">Cookie Policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- footer -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        gsap.from(".footer-col", {
+          scrollTrigger: {
+            trigger: ".premium-footer",
+            start: "top 90%",
+          },
+          opacity: 0,
+          y: 40,
+          stagger: 0.15,
+          duration: 1,
+          ease: "power2.out",
+        });
+
+        // Fade in the bottom bar divider
+        gsap.from(".divider-line", {
+          scrollTrigger: ".footer-bottom",
+          opacity: 0,
+          duration: 2,
+          ease: "power4.inOut",
+        });
+      });
+    </script>
+
+    <!-- hero -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        const tl = gsap.timeline();
+
+        tl.from(".hero-left > *", {
+          opacity: 0,
+          x: -30,
+          stagger: 0.2,
+          duration: 1,
+          ease: "power3.out",
+        }).from(
+          ".featured-card",
+          {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            ease: "power2.out",
+          },
+          "-=0.8",
+        );
+
+        // Subtle background glow pulse
+        gsap.to(".blog-hero-bg", {
+          scale: 1.2,
+          opacity: 0.8,
+          duration: 4,
+          repeat: -1,
+          yoyo: true,
+          ease: "sine.inOut",
+        });
+      });
+    </script>
+
+    <script>
+      function featuredHover(card) {
+        gsap.to(card, {
+          borderColor: "orangered",
+          y: -10,
+          duration: 0.4,
+        });
+
+        gsap.to(card.querySelector("img"), {
+          scale: 1.1,
+          opacity: 1,
+          duration: 0.6,
+        });
+
+        gsap.to(card.querySelector(".read-more i"), {
+          x: 8,
+          duration: 0.3,
+          repeat: -1,
+          yoyo: true,
+        });
+      }
+
+      function featuredLeave(card) {
+        gsap.to(card, {
+          borderColor: "#1a1a1a",
+          y: 0,
+          duration: 0.4,
+        });
+
+        gsap.to(card.querySelector("img"), {
+          scale: 1,
+          opacity: 0.8,
+          duration: 0.6,
+        });
+
+        gsap.killTweensOf(card.querySelector(".read-more i"));
+        gsap.to(card.querySelector(".read-more i"), { x: 0 });
+      }
+    </script>
+
+    <!-- section-header -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Select all headers on the page
+        const allHeaders = document.querySelectorAll(".section-header");
+
+        allHeaders.forEach((header) => {
+          // Select internal elements for this specific header
+          const tag = header.querySelector(".small-tag");
+          const title = header.querySelector(".header-title");
+          const line = header.querySelector(".header-line");
+
+          // Create a timeline for this header
+          const headerTl = gsap.timeline({
+            scrollTrigger: {
+              trigger: header,
+              start: "top 85%", // Starts when the header is 85% from the top
+              toggleActions: "play none none none", // Only plays once
+            },
+          });
+
+          headerTl
+            // 1. Reveal the container
+            .to(header, { opacity: 1, duration: 0.1 })
+
+            // 2. Small Tag slides up and fades in
+            .fromTo(
+              tag,
+              { y: 20, opacity: 0 },
+              { y: 0, opacity: 1, duration: 0.6, ease: "power2.out" },
+            )
+
+            // 3. Main Title pops in with a slight delay
+            .fromTo(
+              title,
+              { y: 30, opacity: 0 },
+              { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" },
+              "-=0.4",
+            )
+
+            // 4. The Orangered Line 'draws' out from the center
+            .to(
+              line,
+              {
+                width: "60px",
+                duration: 1,
+                ease: "expo.out",
+              },
+              "-=0.3",
+            );
+        });
+      });
+    </script>
+
+    <!-- 1 -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Entrance Animation
+        const featuredTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".featured-blog-container",
+            start: "top 80%",
+          },
+        });
+
+        featuredTl
+          .from(".featured-blog-container", {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            ease: "power3.out",
+          })
+          .to(
+            ".progress-bar-fill",
+            {
+              width: "75%", // Represents the trending level
+              duration: 1.5,
+              ease: "expo.out",
+            },
+            "-=0.5",
+          );
+      });
+    </script>
+
+    <script>
+      function spotlightHover(el) {
+        // Border and scale effect
+        gsap.to(el, { borderColor: "orangered", duration: 0.4 });
+
+        // Image zoom
+        gsap.to(el.querySelector(".featured-visual img"), {
+          scale: 1.05,
+          duration: 0.8,
+        });
+
+        // Button interaction
+        gsap.to(el.querySelector(".read-btn"), {
+          backgroundColor: "orangered",
+          borderColor: "orangered",
+          duration: 0.3,
+        });
+
+        // Icon animation
+        gsap.to(el.querySelector(".read-btn i"), {
+          x: 5,
+          repeat: -1,
+          yoyo: true,
+          duration: 0.4,
+        });
+      }
+
+      function spotlightLeave(el) {
+        gsap.to(el, { borderColor: "#1a1a1a", duration: 0.4 });
+
+        gsap.to(el.querySelector(".featured-visual img"), {
+          scale: 1,
+          duration: 0.8,
+        });
+
+        gsap.to(el.querySelector(".read-btn"), {
+          backgroundColor: "transparent",
+          borderColor: "#333",
+          duration: 0.3,
+        });
+
+        gsap.killTweensOf(el.querySelector(".read-btn i"));
+        gsap.to(el.querySelector(".read-btn i"), { x: 0 });
+      }
+    </script>
+
+    <!-- 2 , 3 -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // 1. Categories Entrance
+        gsap.from(".cat-card", {
+          scrollTrigger: {
+            trigger: ".category-grid",
+            start: "top 85%",
+          },
+          opacity: 1,
+          stagger: 0.14,
+          duration: 0.8,
+          ease: "power2.out",
+        });
+
+        // 2. Posts Entrance
+        gsap.from(".post-item", {
+          scrollTrigger: {
+            trigger: ".posts-feed",
+            start: "top 85%",
+          },
+          opacity: 0,
+          stagger: 0.2,
+          duration: 1,
+          ease: "expo.out",
+        });
+      });
+
+      /* --- Functions --- */
+
+      // Category Hover
+      function catHover(el) {
+        gsap.to(el.querySelector(".cat-icon"), {
+          color: "orangered",
+          y: -5,
+          duration: 0.3,
+        });
+        gsap.to(el, { borderColor: "orangered", y: -5, duration: 0.3 });
+      }
+
+      function catLeave(el) {
+        gsap.to(el.querySelector(".cat-icon"), {
+          color: "#444",
+          y: 0,
+          duration: 0.3,
+        });
+        gsap.to(el, { borderColor: "#1a1a1a", y: 0, duration: 0.3 });
+      }
+
+      // Post Hover
+      function postHover(el) {
+        gsap.to(el.querySelector("img"), {
+          scale: 1.1,
+          opacity: 1,
+          duration: 0.5,
+        });
+        gsap.to(el.querySelector(".arrow-link"), {
+          backgroundColor: "orangered",
+          borderColor: "orangered",
+          x: 5,
+          duration: 0.3,
+        });
+      }
+
+      function postLeave(el) {
+        gsap.to(el.querySelector("img"), {
+          scale: 1,
+          opacity: 0.6,
+          duration: 0.5,
+        });
+        gsap.to(el.querySelector(".arrow-link"), {
+          backgroundColor: "transparent",
+          borderColor: "#222",
+          x: 0,
+          duration: 0.3,
+        });
+      }
+
+      // Filter Simulation
+      function filterCategory(el, type) {
+        console.log("Filtering by: " + type);
+        // You can add logic here to hide/show posts in the posts-feed
+        gsap.from(".post-item", {
+          opacity: 0,
+          y: 20,
+          stagger: 0.1,
+          duration: 0.5,
+        });
+      }
+    </script>
+
+    <!-- 4 -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        const popTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".popular-grid",
+            start: "top 80%",
+          },
+        });
+
+        popTl
+          .from(".popular-feature", {
+            opacity: 1,
+            x: 0,
+            duration: 1,
+            ease: "power3.out",
+          })
+          .from(
+            ".pop-list-item",
+            {
+              opacity: 1,
+              x: 0,
+              stagger: 0.2,
+              duration: 0.8,
+              ease: "power2.out",
+            },
+            "-=0.5",
+          );
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        const popTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".popular-grid",
+            start: "top 80%",
+          },
+        });
+
+        popTl
+          .from(".popular-feature", {
+            opacity: 1,
+            x: -50,
+            duration: 1,
+            ease: "power3.out",
+          })
+          .from(
+            ".pop-list-item",
+            {
+              opacity: 1,
+              x: 30,
+              stagger: 0.2,
+              duration: 0.8,
+              ease: "power2.out",
+            },
+            "-=0.5",
+          );
+      });
+    </script>
+  </body>
+</html>

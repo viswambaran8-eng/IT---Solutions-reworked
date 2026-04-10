@@ -1,0 +1,1155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IT Solutions</title>
+    <link rel="stylesheet" href="./services.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="./index.html">
+          <img src="./Assets/logo.webp" alt="IT Solution Logo" />
+        </a>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="./index.html" class="active-page">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./services.html">Services</a></li>
+          <li><a href="./blog.html">Blog</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="div">
+        <div class="div">
+          <a href="./login.html">
+            <button class="btn">Login</button>
+          </a>
+        </div>
+        <div class="menu-icon" id="menu-trigger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <!-- <div class="sidebar-logo">STACKLY<span>.</span></div> -->
+        <div class="logo">
+          <a href="./index.html">
+            <img src="./Assets/logo.webp" alt="" />
+          </a>
+        </div>
+
+        <div class="close-icon" id="close-trigger">&times;</div>
+      </div>
+      <ul class="side-links">
+        <li class="side-item">
+          <a href="./index.html">Home</a>
+        </li>
+        <li class="side-item"><a href="./about.html">About</a></li>
+        <li class="side-item"><a href="./services.html">Services</a></li>
+        <li class="side-item"><a href="./blog.html">Blog</a></li>
+        <li class="side-item"><a href="./contact.html">Contact</a></li>
+        <li class="side-item"><a href="./login.html">Login</a></li>
+      </ul>
+      <div class="sidebar-footer">
+        <!-- <button class="side-log-btn">Open An Account</button> -->
+      </div>
+    </aside>
+
+    <div class="overlay" id="overlay"></div>
+
+    <section class="services-hero">
+      <div class="hero-bg-container">
+        <img
+          src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1600"
+          alt="Tech Infrastructure"
+        />
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="services-container">
+        <div class="hero-split">
+          <div class="hero-left">
+            <div class="hero-badge">Our Expertise</div>
+            <h1 class="hero-title">
+              Comprehensive <span class="accent">IT Services</span> for Modern
+              Businesses
+            </h1>
+            <p class="hero-description">
+              From scalable cloud architecture to medical-grade cybersecurity,
+              we provide the technical foundation your enterprise needs to
+              thrive in a digital-first world.
+            </p>
+            <div class="hero-actions">
+              <a href="./error.html">
+                <button
+                  class="cta-primary"
+                  onmouseenter="btnHover(this)"
+                  onmouseleave="btnLeave(this)"
+                >
+                  View Solutions <i class="fa-solid fa-arrow-down"></i>
+                </button>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-right">
+            <div
+              class="service-feature-card"
+              onmouseenter="cardRise(this)"
+              onmouseleave="cardLower(this)"
+            >
+              <div class="card-inner">
+                <div class="icon-box">
+                  <i class="fa-solid fa-microchip"></i>
+                </div>
+                <h3>Next-Gen Infrastructure</h3>
+                <p>
+                  Deploying AI-ready frameworks and automated CI/CD pipelines
+                  for maximum efficiency.
+                </p>
+                <div class="card-tag">Innovation-First</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-grid-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="small-tag">Expertise</span>
+          <h2 class="header-title">
+            Our IT <span class="accent">Solutions</span>
+          </h2>
+          <div class="header-line"></div>
+        </div>
+
+        <div class="services-main-grid">
+          <div
+            class="service-tile"
+            onmouseenter="tileHover(this)"
+            onmouseleave="tileLeave(this)"
+          >
+            <div class="tile-icon"><i class="fa-solid fa-cloud"></i></div>
+            <h3>Cloud Solutions</h3>
+            <p>
+              Scalable cloud infrastructure design and seamless migration
+              strategies.
+            </p>
+            <div class="tile-number">01</div>
+          </div>
+
+          <div
+            class="service-tile"
+            onmouseenter="tileHover(this)"
+            onmouseleave="tileLeave(this)"
+          >
+            <div class="tile-icon">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h3>Cybersecurity</h3>
+            <p>
+              Advanced threat detection and enterprise-grade data protection.
+            </p>
+            <div class="tile-number">02</div>
+          </div>
+
+          <div
+            class="service-tile"
+            onmouseenter="tileHover(this)"
+            onmouseleave="tileLeave(this)"
+          >
+            <div class="tile-icon"><i class="fa-solid fa-code"></i></div>
+            <h3>Software Dev</h3>
+            <p>Custom agile development for mobile and web-based platforms.</p>
+            <div class="tile-number">03</div>
+          </div>
+
+          <div
+            class="service-tile"
+            onmouseenter="tileHover(this)"
+            onmouseleave="tileLeave(this)"
+          >
+            <div class="tile-icon">
+              <i class="fa-solid fa-network-wired"></i>
+            </div>
+            <h3>Managed IT</h3>
+            <p>24/7 proactive monitoring and professional system support.</p>
+            <div class="tile-number">04</div>
+          </div>
+
+          <div
+            class="service-tile"
+            onmouseenter="tileHover(this)"
+            onmouseleave="tileLeave(this)"
+          >
+            <div class="tile-icon"><i class="fa-solid fa-chart-line"></i></div>
+            <h3>Data Analytics</h3>
+            <p>Transforming raw data into actionable business intelligence.</p>
+            <div class="tile-number">05</div>
+          </div>
+
+          <div
+            class="service-tile"
+            onmouseenter="tileHover(this)"
+            onmouseleave="tileLeave(this)"
+          >
+            <div class="tile-icon"><i class="fa-solid fa-microchip"></i></div>
+            <h3>AI Integration</h3>
+            <p>Deploying machine learning models to automate core workflows.</p>
+            <div class="tile-number">06</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-tabs-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="small-tag">Deep Dive</span>
+          <h2 class="header-title">
+            Our Technical <span class="accent">Capabilities</span>
+          </h2>
+          <div class="header-line"></div>
+        </div>
+
+        <div class="tabs-wrapper">
+          <div class="tabs-nav">
+            <button class="tab-btn active" onclick="openTab(event, 'cloud')">
+              <i class="fa-solid fa-cloud"></i> Cloud Computing
+            </button>
+            <button class="tab-btn" onclick="openTab(event, 'ai')">
+              <i class="fa-solid fa-brain"></i> AI Solutions
+            </button>
+            <button class="tab-btn" onclick="openTab(event, 'web')">
+              <i class="fa-solid fa-code"></i> Web Development
+            </button>
+            <button class="tab-btn" onclick="openTab(event, 'cyber')">
+              <i class="fa-solid fa-shield-halved"></i> Cybersecurity
+            </button>
+          </div>
+
+          <div class="tabs-content-container">
+            <div id="cloud" class="tab-panel active">
+              <h3>Cloud Computing</h3>
+              <p>
+                We architect resilient cloud environments that scale with your
+                traffic. From AWS to Azure, we ensure zero-downtime migrations.
+              </p>
+              <ul class="tab-list">
+                <li>
+                  <i class="fa-solid fa-check"></i> Serverless Architecture
+                </li>
+                <li><i class="fa-solid fa-check"></i> Hybrid Cloud Strategy</li>
+                <li>
+                  <i class="fa-solid fa-check"></i> 99.9% Uptime Guarantee
+                </li>
+              </ul>
+            </div>
+
+            <div id="ai" class="tab-panel">
+              <h3>AI Solutions</h3>
+              <p>
+                Integrating machine learning and predictive analytics into your
+                existing workflows to automate decision-making.
+              </p>
+              <ul class="tab-list">
+                <li>
+                  <i class="fa-solid fa-check"></i> NLP & Chatbot Integration
+                </li>
+                <li>
+                  <i class="fa-solid fa-check"></i> Predictive Data Modeling
+                </li>
+                <li>
+                  <i class="fa-solid fa-check"></i> Computer Vision Systems
+                </li>
+              </ul>
+            </div>
+
+            <div id="web" class="tab-panel">
+              <h3>Web Development</h3>
+              <p>
+                High-performance, medical-grade precision web apps built with
+                modern frameworks and interactive GSAP animations.
+              </p>
+              <ul class="tab-list">
+                <li>
+                  <i class="fa-solid fa-check"></i> React & Next.js Ecosystem
+                </li>
+                <li>
+                  <i class="fa-solid fa-check"></i> Interactive UI/UX Design
+                </li>
+                <li><i class="fa-solid fa-check"></i> API First Development</li>
+              </ul>
+            </div>
+
+            <div id="cyber" class="tab-panel">
+              <h3>Cybersecurity</h3>
+              <p>
+                Hardening your digital perimeter with multi-layer defense
+                strategies and real-time threat monitoring.
+              </p>
+              <ul class="tab-list">
+                <li>
+                  <i class="fa-solid fa-check"></i> Zero Trust Architecture
+                </li>
+                <li><i class="fa-solid fa-check"></i> Penetration Testing</li>
+                <li><i class="fa-solid fa-check"></i> Encrypted Data Vaults</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="process-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="small-tag">Execution</span>
+          <h2 class="header-title">
+            Our Development <span class="accent">Process</span>
+          </h2>
+          <div class="header-line"></div>
+        </div>
+
+        <div class="process-timeline">
+          <div class="timeline-spine">
+            <div class="spine-progress"></div>
+          </div>
+
+          <div class="process-step">
+            <div class="step-dot">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div
+              class="step-content"
+              onmouseenter="stepHover(this)"
+              onmouseleave="stepLeave(this)"
+            >
+              <span class="step-num">01</span>
+              <h3>Discovery & Strategy</h3>
+              <p>
+                We analyze your current infrastructure and define the roadmap
+                for your digital transformation.
+              </p>
+            </div>
+          </div>
+
+          <div class="process-step">
+            <div class="step-dot"><i class="fa-solid fa-pen-nib"></i></div>
+            <div
+              class="step-content"
+              onmouseenter="stepHover(this)"
+              onmouseleave="stepLeave(this)"
+            >
+              <span class="step-num">02</span>
+              <h3>Architecture & Design</h3>
+              <p>
+                Crafting high-precision system blueprints and interactive UI/UX
+                prototypes.
+              </p>
+            </div>
+          </div>
+
+          <div class="process-step">
+            <div class="step-dot"><i class="fa-solid fa-code"></i></div>
+            <div
+              class="step-content"
+              onmouseenter="stepHover(this)"
+              onmouseleave="stepLeave(this)"
+            >
+              <span class="step-num">03</span>
+              <h3>Development & Testing</h3>
+              <p>
+                Agile engineering with continuous integration and medical-grade
+                quality assurance.
+              </p>
+            </div>
+          </div>
+
+          <div class="process-step">
+            <div class="step-dot"><i class="fa-solid fa-rocket"></i></div>
+            <div
+              class="step-content"
+              onmouseenter="stepHover(this)"
+              onmouseleave="stepLeave(this)"
+            >
+              <span class="step-num">04</span>
+              <h3>Deployment & Support</h3>
+              <p>
+                Seamless go-live execution followed by 24/7 proactive system
+                monitoring.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tools-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="small-tag">Infrastructure</span>
+          <h2 class="header-title">
+            Tools & <span class="accent">Platforms</span>
+          </h2>
+          <div class="header-line"></div>
+        </div>
+
+        <div class="tools-wrapper">
+          <div class="tools-marquee">
+            <div
+              class="tool-item"
+              onmouseenter="toolHover(this)"
+              onmouseleave="toolLeave(this)"
+            >
+              <i class="fa-brands fa-aws"></i> <span>AWS</span>
+            </div>
+            <div
+              class="tool-item"
+              onmouseenter="toolHover(this)"
+              onmouseleave="toolLeave(this)"
+            >
+              <i class="fa-brands fa-react"></i> <span>React</span>
+            </div>
+            <div
+              class="tool-item"
+              onmouseenter="toolHover(this)"
+              onmouseleave="toolLeave(this)"
+            >
+              <i class="fa-brands fa-docker"></i> <span>Docker</span>
+            </div>
+            <div
+              class="tool-item"
+              onmouseenter="toolHover(this)"
+              onmouseleave="toolLeave(this)"
+            >
+              <i class="fa-brands fa-python"></i> <span>Python</span>
+            </div>
+            <div
+              class="tool-item"
+              onmouseenter="toolHover(this)"
+              onmouseleave="toolLeave(this)"
+            >
+              <i class="fa-brands fa-node-js"></i> <span>Node.js</span>
+            </div>
+            <div
+              class="tool-item"
+              onmouseenter="toolHover(this)"
+              onmouseleave="toolLeave(this)"
+            >
+              <i class="fa-brands fa-github"></i> <span>GitHub</span>
+            </div>
+
+            <div
+              class="tool-item"
+              onmouseenter="toolHover(this)"
+              onmouseleave="toolLeave(this)"
+            >
+              <i class="fa-brands fa-aws"></i> <span>AWS</span>
+            </div>
+            <div
+              class="tool-item"
+              onmouseenter="toolHover(this)"
+              onmouseleave="toolLeave(this)"
+            >
+              <i class="fa-brands fa-react"></i> <span>React</span>
+            </div>
+            <div
+              class="tool-item"
+              onmouseenter="toolHover(this)"
+              onmouseleave="toolLeave(this)"
+            >
+              <i class="fa-brands fa-docker"></i> <span>Docker</span>
+            </div>
+            <div
+              class="tool-item"
+              onmouseenter="toolHover(this)"
+              onmouseleave="toolLeave(this)"
+            >
+              <i class="fa-brands fa-python"></i> <span>Python</span>
+            </div>
+            <div
+              class="tool-item"
+              onmouseenter="toolHover(this)"
+              onmouseleave="toolLeave(this)"
+            >
+              <i class="fa-brands fa-node-js"></i> <span>Node.js</span>
+            </div>
+            <div
+              class="tool-item"
+              onmouseenter="toolHover(this)"
+              onmouseleave="toolLeave(this)"
+            >
+              <i class="fa-brands fa-github"></i> <span>GitHub</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing-section">
+      <div class="pricing-container">
+        <div class="section-header-center">
+          <h2 class="header-title">
+            Flexible <span class="accent">Pricing Plans</span>
+          </h2>
+          <p class="header-subtitle">
+            Scalable IT solutions tailored to your specific organizational
+            needs.
+          </p>
+        </div>
+
+        <div class="pricing-grid">
+          <div
+            class="pricing-card"
+            onmouseenter="priceHover(this)"
+            onmouseleave="priceLeave(this)"
+          >
+            <div class="plan-tag">Basic</div>
+            <h3 class="plan-name">Starter</h3>
+            <div class="plan-price">$999<span>/mo</span></div>
+            <p class="plan-desc">
+              For small businesses starting their digital journey.
+            </p>
+            <ul class="plan-features">
+              <li><i class="fa-solid fa-check"></i> Core UI Development</li>
+              <li><i class="fa-solid fa-check"></i> Standard Security</li>
+              <li><i class="fa-solid fa-check"></i> 5GB Cloud Storage</li>
+              <li><i class="fa-solid fa-check"></i> Business Hours Support</li>
+            </ul>
+            <a href="./error.html" class="price-btn">Get Started</a>
+          </div>
+
+          <div
+            class="pricing-card featured"
+            onmouseenter="priceHover(this)"
+            onmouseleave="priceLeave(this)"
+          >
+            <div class="plan-tag highlight">Most Popular</div>
+            <h3 class="plan-name">Professional</h3>
+            <div class="plan-price">$2,499<span>/mo</span></div>
+            <p class="plan-desc">
+              For growing companies requiring advanced intelligence.
+            </p>
+            <ul class="plan-features">
+              <li><i class="fa-solid fa-check"></i> Full Stack Solutions</li>
+              <li><i class="fa-solid fa-check"></i> Advanced AI Integration</li>
+              <li><i class="fa-solid fa-check"></i> 50GB Cloud Storage</li>
+              <li><i class="fa-solid fa-check"></i> 24/7 Priority Support</li>
+              <li><i class="fa-solid fa-check"></i> Custom API Access</li>
+            </ul>
+            <a href="./error.html" class="price-btn active">Scale Now</a>
+          </div>
+
+          <div
+            class="pricing-card"
+            onmouseenter="priceHover(this)"
+            onmouseleave="priceLeave(this)"
+          >
+            <div class="plan-tag">Custom</div>
+            <h3 class="plan-name">Enterprise</h3>
+            <div class="plan-price">Custom</div>
+            <p class="plan-desc">
+              For large-scale solutions and global infrastructure.
+            </p>
+            <ul class="plan-features">
+              <li>
+                <i class="fa-solid fa-check"></i> Full Infrastructure Control
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i> Enterprise-Grade Security
+              </li>
+              <li><i class="fa-solid fa-check"></i> Unlimited Storage</li>
+              <li>
+                <i class="fa-solid fa-check"></i> Dedicated Account Manager
+              </li>
+            </ul>
+            <a href="./error.html" class="price-btn">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="premium-footer">
+      <div class="footer-upper">
+        <div class="footer-col brand-col">
+          <div class="logo footer-logo">
+            <a href="./index.html">
+              <img src="./Assets/logo.webp" alt="OrangeRed IT Solutions Logo" />
+            </a>
+          </div>
+          <p class="brand-brief">
+            Empowering modern enterprises with resilient IT infrastructure. We
+            specialize in scalable cloud architecture, cybersecurity
+            intelligence, and full-stack digital transformation to keep your
+            business future-ready.
+          </p>
+          <div class="footer-socials">
+            <a href="./error.html"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="./error.html"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="./error.html"><i class="fa-brands fa-github"></i></a>
+            <a href="./error.html"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="./about.html">About </a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./login.html">Login</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-title">IT Solutions</h4>
+          <ul class="footer-links">
+            <li><a href="./error.html">Cloud Migration & Ops</a></li>
+            <li><a href="./error.html">Managed Cybersecurity</a></li>
+            <li><a href="./error.html">Enterprise Software Dev</a></li>
+            <li><a href="./error.html">Data Analytics & BI</a></li>
+            <li><a href="./error.html">IT Strategy Consulting</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col contact-col">
+          <h4 class="footer-title">Stay Connected</h4>
+          <p class="small-text">
+            Subscribe for the latest insights in enterprise tech and security.
+          </p>
+          <form class="footer-subscribe" action="./error.html">
+            <input type="email" placeholder="Work Email" required />
+            <button><i class="fa-solid fa-paper-plane"></i></button>
+          </form>
+          <div class="contact-info">
+            <span><i class="fa-solid fa-phone"></i>+91 234 5678</span>
+            <span><i class="fa-solid fa-envelope"></i>123@stackly.com</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-container">
+          <div class="divider-line"></div>
+          <div class="bottom-flex">
+            <p class="copyright">
+              &copy; 2026 Stackly IT Solutions. All Rights Reserved.
+            </p>
+            <div class="legal-links">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms of Service</a>
+              <a href="#">Cookie Policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- footer -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        gsap.from(".footer-col", {
+          scrollTrigger: {
+            trigger: ".premium-footer",
+            start: "top 90%",
+          },
+          opacity: 0,
+          y: 40,
+          stagger: 0.15,
+          duration: 1,
+          ease: "power2.out",
+        });
+
+        // Fade in the bottom bar divider
+        gsap.from(".divider-line", {
+          scrollTrigger: ".footer-bottom",
+          opacity: 0,
+          duration: 2,
+          ease: "power4.inOut",
+        });
+      });
+    </script>
+
+    <!-- hero -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // 1. Entrance Animation
+        const tl = gsap.timeline();
+
+        tl.from(".hero-badge", { opacity: 0, x: -20, duration: 0.8 })
+          .from(
+            ".hero-title",
+            { opacity: 0, y: 40, duration: 1, ease: "power3.out" },
+            "-=0.4",
+          )
+          .from(
+            ".hero-description",
+            { opacity: 0, y: 20, duration: 0.8 },
+            "-=0.6",
+          )
+          .from(
+            ".cta-primary",
+            { opacity: 0, scale: 0.9, duration: 0.6 },
+            "-=0.6",
+          )
+          .from(
+            ".hero-right",
+            { opacity: 0, x: 50, duration: 1, ease: "power2.out" },
+            "-=1",
+          );
+
+        // 2. Background Parallax
+        gsap.to(".hero-bg-container img", {
+          yPercent: 20,
+          ease: "none",
+          scrollTrigger: {
+            trigger: ".services-hero",
+            start: "top top",
+            end: "bottom top",
+            scrub: true,
+          },
+        });
+      });
+
+      // 3. Interactive Functions
+      function btnHover(btn) {
+        gsap.to(btn, {
+          backgroundColor: "#cc3700",
+          paddingRight: "45px",
+          duration: 0.3,
+        });
+        gsap.to(btn.querySelector("i"), {
+          y: 5,
+          repeat: -1,
+          yoyo: true,
+          duration: 0.4,
+        });
+      }
+
+      function btnLeave(btn) {
+        gsap.to(btn, {
+          backgroundColor: "orangered",
+          paddingRight: "35px",
+          duration: 0.3,
+        });
+        gsap.to(btn.querySelector("i"), { y: 0 });
+        gsap.killTweensOf(btn.querySelector("i"));
+      }
+
+      function cardRise(card) {
+        gsap.to(card, { y: -15, borderColor: "orangered", duration: 0.4 });
+      }
+
+      function cardLower(card) {
+        gsap.to(card, {
+          y: 0,
+          borderColor: "rgba(255, 69, 0, 0.2)",
+          duration: 0.4,
+        });
+      }
+    </script>
+
+    <!-- 2 -->
+    <!-- section-header -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Select all headers on the page
+        const allHeaders = document.querySelectorAll(".section-header");
+
+        allHeaders.forEach((header) => {
+          // Select internal elements for this specific header
+          const tag = header.querySelector(".small-tag");
+          const title = header.querySelector(".header-title");
+          const line = header.querySelector(".header-line");
+
+          // Create a timeline for this header
+          const headerTl = gsap.timeline({
+            scrollTrigger: {
+              trigger: header,
+              start: "top 85%", // Starts when the header is 85% from the top
+              toggleActions: "play none none none", // Only plays once
+            },
+          });
+
+          headerTl
+            // 1. Reveal the container
+            .to(header, { opacity: 1, duration: 0.1 })
+
+            // 2. Small Tag slides up and fades in
+            .fromTo(
+              tag,
+              { y: 20, opacity: 0 },
+              { y: 0, opacity: 1, duration: 0.6, ease: "power2.out" },
+            )
+
+            // 3. Main Title pops in with a slight delay
+            .fromTo(
+              title,
+              { y: 30, opacity: 0 },
+              { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" },
+              "-=0.4",
+            )
+
+            // 4. The Orangered Line 'draws' out from the center
+            .to(
+              line,
+              {
+                width: "60px",
+                duration: 1,
+                ease: "expo.out",
+              },
+              "-=0.3",
+            );
+        });
+      });
+    </script>
+    <!--  -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Staggered Entrance for Tiles
+        gsap.from(".service-tile", {
+          scrollTrigger: {
+            trigger: ".services-main-grid",
+            start: "top 80%",
+          },
+          opacity: 0,
+          y: 30,
+          stagger: 0.15,
+          duration: 1,
+          ease: "power2.out",
+        });
+      });
+    </script>
+
+    <script>
+      function tileHover(el) {
+        // Turn border orangered
+        gsap.to(el, { borderColor: "orangered", duration: 0.3 });
+
+        // Pop the icon
+        gsap.to(el.querySelector(".tile-icon"), {
+          y: -5,
+          scale: 1.1,
+          duration: 0.3,
+        });
+
+        // Make the number and description brighter
+        gsap.to(el.querySelector(".tile-number"), {
+          color: "orangered",
+          duration: 0.3,
+        });
+
+        gsap.to(el.querySelector("p"), {
+          color: "#fff",
+          duration: 0.3,
+        });
+      }
+
+      function tileLeave(el) {
+        gsap.to(el, { borderColor: "#1a1a1a", duration: 0.3 });
+
+        gsap.to(el.querySelector(".tile-icon"), {
+          y: 0,
+          scale: 1,
+          duration: 0.3,
+        });
+
+        gsap.to(el.querySelector(".tile-number"), {
+          color: "rgba(255, 69, 0, 0.05)",
+          duration: 0.3,
+        });
+
+        gsap.to(el.querySelector("p"), {
+          color: "#777",
+          duration: 0.3,
+        });
+      }
+    </script>
+
+    <!-- 3 -->
+
+    <script>
+      function openTab(evt, tabId) {
+        // 1. Manage Active States
+        const tabPanels = document.getElementsByClassName("tab-panel");
+        const tabBtns = document.getElementsByClassName("tab-btn");
+
+        for (let panel of tabPanels) {
+          panel.classList.remove("active");
+          panel.style.display = "none";
+        }
+        for (let btn of tabBtns) {
+          btn.classList.remove("active");
+        }
+
+        // 2. Set Current Active
+        const activePanel = document.getElementById(tabId);
+        activePanel.style.display = "block";
+        activePanel.classList.add("active");
+        evt.currentTarget.classList.add("active");
+
+        // 3. GSAP Animation for Content Reveal
+        gsap.fromTo(
+          activePanel,
+          { opacity: 0, x: 20 },
+          { opacity: 1, x: 0, duration: 0.5, ease: "power2.out" },
+        );
+
+        // Stagger the list items inside the panel
+        gsap.from(activePanel.querySelectorAll(".tab-list li"), {
+          opacity: 0,
+          y: 10,
+          stagger: 0.1,
+          duration: 0.4,
+          delay: 0.2,
+        });
+      }
+
+      // Initial Animation for the section
+      document.addEventListener("DOMContentLoaded", () => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.from(".tabs-wrapper", {
+          scrollTrigger: {
+            trigger: ".services-tabs-section",
+            start: "top 80%",
+          },
+          opacity: 0,
+          y: 40,
+          duration: 1,
+          ease: "power3.out",
+        });
+      });
+    </script>
+
+    <!-- 4 -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // 1. Spine Progress Animation
+        gsap.to(".spine-progress", {
+          height: "100%",
+          ease: "none",
+          scrollTrigger: {
+            trigger: ".process-timeline",
+            start: "top 70%",
+            end: "bottom 70%",
+            scrub: 1,
+          },
+        });
+
+        // 2. Activate dots as line passes them
+        const steps = document.querySelectorAll(".process-step");
+        steps.forEach((step) => {
+          ScrollTrigger.create({
+            trigger: step,
+            start: "top 70%",
+            onEnter: () =>
+              step.querySelector(".step-dot").classList.add("active"),
+            onLeaveBack: () =>
+              step.querySelector(".step-dot").classList.remove("active"),
+          });
+
+          // Fade in the content
+          gsap.from(step.querySelector(".step-content"), {
+            opacity: 0,
+            x: 30,
+            duration: 0.8,
+            scrollTrigger: {
+              trigger: step,
+              start: "top 80%",
+            },
+          });
+        });
+      });
+
+      function stepHover(el) {
+        gsap.to(el, {
+          borderColor: "orangered",
+          backgroundColor: "#151515",
+          duration: 0.3,
+        });
+
+        gsap.to(el.querySelector("h3"), {
+          color: "orangered",
+          x: 5,
+          duration: 0.3,
+        });
+      }
+
+      function stepLeave(el) {
+        gsap.to(el, {
+          borderColor: "#1a1a1a",
+          backgroundColor: "#0a0a0a",
+          duration: 0.3,
+        });
+
+        gsap.to(el.querySelector("h3"), {
+          color: "#ffffff",
+          x: 0,
+          duration: 0.3,
+        });
+      }
+    </script>
+
+    <!-- 5 -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const marquee = document.querySelector(".tools-marquee");
+
+        // Calculate half width for the loop
+        const scrollWidth = marquee.scrollWidth / 2;
+
+        const loop = gsap.to(".tools-marquee", {
+          x: -scrollWidth,
+          duration: 20, // Adjust speed here
+          ease: "none",
+          repeat: -1,
+        });
+
+        // Pause on Hover
+        const toolsSection = document.querySelector(".tools-section");
+        toolsSection.addEventListener("mouseenter", () => loop.pause());
+        toolsSection.addEventListener("mouseleave", () => loop.play());
+      });
+    </script>
+
+    <script>
+      function toolHover(el) {
+        // Border and Icon light up
+        gsap.to(el, {
+          borderColor: "orangered",
+          backgroundColor: "#0f0f0f",
+          duration: 0.3,
+        });
+
+        gsap.to(el.querySelector("i"), {
+          color: "orangered",
+          scale: 1.1,
+          duration: 0.3,
+        });
+
+        gsap.to(el.querySelector("span"), {
+          color: "#ffffff",
+          duration: 0.3,
+        });
+      }
+
+      function toolLeave(el) {
+        gsap.to(el, {
+          borderColor: "#1a1a1a",
+          backgroundColor: "#0a0a0a",
+          duration: 0.3,
+        });
+
+        gsap.to(el.querySelector("i"), {
+          color: "#444",
+          scale: 1,
+          duration: 0.3,
+        });
+
+        gsap.to(el.querySelector("span"), {
+          color: "#444",
+          duration: 0.3,
+        });
+      }
+    </script>
+
+    <!-- 6 -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // 1. Entrance Sequence
+        gsap.to(".section-header-center", {
+          scrollTrigger: ".pricing-section",
+          opacity: 1,
+          y: 0,
+          duration: 1,
+        });
+
+        // 2. Cards Staggered Entrance
+        gsap.to(".pricing-card", {
+          scrollTrigger: {
+            trigger: ".pricing-grid",
+            start: "top 80%",
+          },
+          opacity: 1,
+          y: 0,
+          stagger: 0.2,
+          duration: 1,
+          ease: "power3.out",
+        });
+
+        // 3. Constant pulse for Featured Card
+        gsap.to(".pricing-card.featured", {
+          boxShadow: "0 10px 50px rgba(255, 69, 0, 0.25)",
+          repeat: -1,
+          yoyo: true,
+          duration: 2,
+          ease: "sine.inOut",
+        });
+      });
+
+      // Interaction Functions
+      function priceHover(el) {
+        gsap.to(el, {
+          scale: el.classList.contains("featured") ? 1.08 : 1.05,
+          borderColor: "#ff4500",
+          duration: 0.4,
+          ease: "power2.out",
+        });
+      }
+
+      function priceLeave(el) {
+        gsap.to(el, {
+          scale: el.classList.contains("featured") ? 1.05 : 1,
+          borderColor: el.classList.contains("featured") ? "#ff4500" : "#222",
+          duration: 0.4,
+          ease: "power2.inOut",
+        });
+      }
+    </script>
+  </body>
+</html>
